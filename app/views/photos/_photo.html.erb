@@ -1,0 +1,18 @@
+<div class="w3-content">
+
+<div class="w3-row w3-margin">
+
+<div class="w3-third w3-card-4">
+	<%= link_to image_tag(photo.image.url(:thumb),class: 'w3-border w3-padding w3-round w3-hover-opacity' ,style: 'width:100%;min-height:200px'), photo.image.url, target: '_blank' %>
+</div>
+<div class="w3-twothird w3-container">
+  <h2 class="w3-red"><%= photo.title %></h2>
+ <p><%= photo.description %></p>
+</div>
+
+ <%= link_to 'Remove', photo_path(photo), class: 'w3-btn w3-right', method: :delete, data: {confirm: 'Are you sure?'} %>
+
+
+</div>
+</div>
+
